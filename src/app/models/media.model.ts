@@ -31,9 +31,14 @@ export interface YouTubeVideo extends Media {
 	data: { videoId: string };
 }
 
+export interface MediaTag {
+	text: string;
+	src: string;
+}
+
 export type MediaTypes = AudioRecording | SpaceRecording | YouTubeVideo;
 export type MediaTypeKey = 'spaceRecording' | 'audioRecording' | 'youTubeVideo';
-
+export type MediaTypeTitles = Record<MediaTypeKey, MediaTag>;
 /**
  * Interfaces utilizadas por backend para definir los tipos de contenido multimedia
  */
